@@ -1,0 +1,533 @@
+html,body{min-height:100%}
+html{background:#FFF url(_intef_bg.png) repeat 0 -2px}
+body{padding:0;
+	text-align: justify;
+	background:url(_intef_header.png) no-repeat 50% 0
+}
+@media all and (min-width:1px) {
+	body{
+		background:url(_intef_header.png) 50% 0 no-repeat,url(_intef_footer.png) center bottom no-repeat
+	}
+}
+#lbOverlay{background:#f3f3f3}
+#content{width:100%;max-width:1280px;min-width:300px;margin:0 auto;text-align:justify;position:relative;padding-bottom:21px}
+#main-wrapper{padding:0 35px 1px 325px;background:#fff url(_intef_left_column.gif) repeat-y 0 0;box-shadow:rgba(0, 0, 0, 0.4) 3px 3px 8px}
+.no-nav #main-wrapper{padding-left:25px;background:#fff}
+#main{width:100%}
+#header,#emptyHeader{border:none;padding:40px 210px 20px 20px;background:none;font-size:1.55em; text-align: center;}
+#emptyHeader{height:42px}
+#headerContent{color:#0D47A1;text-shadow:1px 1px 1px #FFF;text-align: center;font-size: medium;}
+#nodeDecoration{padding:0;margin:0 0 25px 0;border:none;text-shadow:none;background:none;border-bottom:1px dotted #97afb2}
+#nodeTitle{padding:17px 85px 15px 0;color:#3f51b5;letter-spacing:.5px;font-size:1.25em;font-weight:normal}
+.exe-search-bar-on #nodeTitle{padding-right:0}
+#siteFooter{padding:5px 20px 20px 20px;text-align:right;margin-top:-56px}
+/* Navigation */
+/* Bảng màu mới (tham khảo):
+- Xanh Navy đậm (chữ chính): #0D47A1
+- Xanh dương rực rỡ (hover, active): #2979FF
+- Xanh dương sáng (nền phụ): #BBDEFB
+- Xanh dương rất sáng (nền chính): #E3F2FD
+- Trắng: #FFFFFF
+*/
+
+#skipNav {
+    font-size: .95em;
+    text-align: center;
+    padding-top: 25px;
+}
+
+#skipNav a {
+    padding: 5px 15px;
+    background: #0D47A1; /* Xanh Navy đậm */
+    color: #FFFFFF; /* Thêm màu chữ trắng để dễ đọc */
+}
+
+#siteNav {
+    width: 279px;
+    float: left;
+    /* padding-right: 20px; */
+    margin: 15px 0 70px 0;
+}
+
+#siteNav ul,
+#siteNav li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Kiểu menu cấp 1 */
+#siteNav a {
+    font-size: 1 em;
+    display: block;
+    padding: 7px 10px 7px 20px;
+    border-bottom: 1px solid #BBDEFB; /* Viền xanh dương sáng */
+    color: #0D47A1; /* Chữ xanh Navy đậm */
+    background: #E3F2FD; /* Nền xanh dương rất sáng */
+}
+
+/* Hiệu ứng khi di chuột vào menu cấp 1 */
+#siteNav a:hover,
+#siteNav a:focus {
+    color: #FFFFFF; /* Chữ trắng */
+    background: #2979FF; /* Nền xanh rực rỡ */
+    border-color: #2979FF;
+}
+
+/* Kiểu menu cấp 2 */
+#siteNav ul ul a {
+    padding-left: 35px;
+    font-size: 1em;
+    background: #BBDEFB; /* Nền xanh dương sáng */
+    border-color: #E3F2FD;
+    color: #0D47A1; /* Chữ xanh Navy đậm */
+}
+
+/* Hiệu ứng khi di chuột vào menu cấp 2 */
+#siteNav ul ul a:hover,
+#siteNav ul ul a:focus {
+    background: #2979FF; /* Nền xanh rực rỡ */
+    border-color: #2979FF;
+    color: #FFFFFF; /* Chữ trắng */
+}
+
+/* Kiểu cho mục đang được chọn (active) */
+#siteNav .active {
+    color: #FFFFFF; /* Chữ trắng */
+    background: #0D47A1; /* Nền xanh Navy đậm */
+    border-color: #0D47A1;
+}
+
+#siteNav .other-section {
+    display: none;
+}
+
+/* Kiểu menu cấp 3 */
+#siteNav ul ul ul a {
+    padding-left: 50px;
+}
+/* IE6 */
+* html #siteNav a{display:inline-block;width:249px}
+* html #siteNav ul ul a{width:234px}
+* html #siteNav ul ul ul a{width:219px}
+* html #main{width:auto}
+/* Pagination */
+.pagination{padding-top:27px;text-align:right;font-size:.95em}
+.pagination .sep{display:none}
+.pagination a{padding:5px 15px;background:#0D47A1;color:#FFF;margin-left:18px;
+text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3), 0px 0px 5px rgba(0, 0, 0, 0.3), 0px 0px 2px rgba(0, 0, 0, 0.6);
+box-shadow:rgba(0, 0, 0, 0.25) 3px 3px 4px}
+.pagination a span span{display:none}
+.pagination a:hover,.pagination a:focus{background:#317def}
+#topPagination{position:absolute;top:-2px;width:100%;right:20px}
+#topPagination .prev{margin-left:18px}
+.pagination .prev{box-shadow:rgba(0, 0, 0, 0.25) -3px 3px 4px}
+#topPagination .pagination{text-align:right}
+#bottomPagination{padding:0 20px 71px 0}
+.no-nav #bottomPagination{padding-left:20px}
+/* Page counter */
+#topPagination .page-counter{margin-left:16px}
+#bottomPagination .page-counter{margin-left:16px;margin-right:0}
+
+#exe-client-search-form{text-align:left;padding:25px 0 0;margin:0;font-size:.95em}
+
+@media all and (min-width:1230px) {
+	#bottomPagination,#siteFooter{padding-right:0}
+	#topPagination{right:0}
+	#header{padding-left:0}
+}
+
+/* Autoclear */
+#content:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0} 
+#content{/* display:inline-block; */}
+html[xmlns] #content{display:block}
+* html #content{height: 1%;overflow:visible}
+
+#header-options{margin:20px 0 0;position:absolute;top:5.9em;right:20px}
+#header-options a{font-size:.95em;margin-left:15px;background:#fff url(_intef_print.png) no-repeat 5px 50%;padding:0 10px 0 32px;color:#547276}
+#header-options a:hover,#header-options a:focus{color:#0D47A1}
+#header-options #toggle-nav{background-image:url(_intef_menu.gif)}
+#exe-client-search-text{max-width:50%}
+.exe-client-search-result{background:#FFEA92;padding:0 2px}
+a .exe-client-search-result{color:#00566a}
+
+@media all and (max-width: 768px) {
+	#content{width:100%;border:none;margin:0}
+	#nodeTitle{padding-right:0}
+	#main-wrapper{background:#fff}
+	#header,#emptyHeader{padding-left:20px;padding-right:20px;background-position:50% 23px}
+	#exe-client-search-text{max-width:70%}
+	#topPagination{display:none}
+	#bottomPagination,.no-nav #bottomPagination{padding:0 20px}
+	#siteNav{float:none;width:100%;padding:0;margin:0;font-size:.95em}
+	#siteNav a{padding:10px 20px}
+	#siteNav ul ul a{padding-left:40px}
+	#siteNav ul ul ul a{padding-left:60px}		
+	#main-wrapper,.no-nav #main-wrapper{padding-left:20px;padding-right:20px}
+	#siteFooter,.no-nav #siteFooter{padding:20px;text-align:center;margin:0}
+	#content .exe-col{float:none;width:100%;padding:0}
+	iframe,object,embed{max-width:100%}
+	img,video{max-width:100%;height:auto}
+	.pagination{text-align:center;height:35px;position:relative}
+	.pagination .prev{position:absolute;left:0;margin:0}
+	.pagination .next{position:absolute;right:0}	
+	#header-options{position:relative;top:0;left:0;margin:0;background:#FFF;font-size:.95em}
+	#header-options a{margin-left:0;display:block;width:100%;height:auto;color:#3a4749;border-top:1px solid #dbdbdb;border-bottom:1px solid #dbdbdb;line-height:2.6em;letter-spacing:1px;padding:0;text-transform:lowercase}
+	#header-options a span{background:url(_intef_menu.gif) no-repeat 18px 1px;padding-left:45px}
+	#header-options #print-page{display:none}
+	#header-options #toggle-nav{background:none}
+	#bottomPagination .page-counter{margin:0;padding-top:5px;display:inline-block}
+}
+
+@media print{
+	#header,#emptyHeader{margin:0;padding-top:30px;padding-left:0}
+	#siteNav,#header-options,.noprt,.toggle-idevice,#exe-client-search{display:none!important}
+	#main-wrapper,.no-nav #main-wrapper{padding:20px 0;box-shadow:none}
+	body #content{background:#FFF}
+	#content{max-width:100%}
+}
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {right:-300px; opacity:0} 
+  to {right: 0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {right:-300px; opacity:0}
+  to {right: 0; opacity:1}
+}
+
+/* Biến màu để dễ dàng tùy chỉnh */
+:root {
+    --primary-color: #007bff; /* Màu nhấn chính (xanh dương) */
+    --user-message-bg: #007bff;
+    --bot-message-bg: #f1f0f0;
+    --background-color: #ffffff;
+    --header-bg: #007bff;
+    --text-color-light: #ffffff;
+    --text-color-dark: #333333;
+    --border-color: #e5e5e5;
+}
+
+/* -------------------
+   NÚT MỞ CHATBOT
+--------------------*/
+/* --- Định nghĩa animation rung --- */
+@keyframes shake {
+    /* Animation được chia thành các bước nhỏ để tạo hiệu ứng rung qua lại.
+       transform: translate(X, Y) di chuyển icon.
+       transform: rotate(Z) xoay icon.
+    */
+    0%, 100% {
+        transform: translateX(0) rotate(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(0) rotate(-2deg);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(0) rotate(2deg);
+    }
+}
+
+/* --- Áp dụng animation vào icon chatbot --- */
+#keychat {
+    position: fixed;
+    bottom: 65px;
+    right: 15px;
+    width: 60px;
+    height: 60px;
+    background-color: #007bff67;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.2s ease-in-out;
+    
+    /* Dòng animation mới được thêm vào */
+    animation: shake 1s ease-in-out 5s infinite;
+}
+
+#keychat:hover {
+    transform: scale(1.1);
+}
+
+#keychat img {
+    width: 32px;
+    height: 32px;
+}
+
+/* -------------------
+   KHUNG CHAT CHÍNH
+--------------------*/
+.pop-up {
+    display: none;
+    position: fixed;
+    right: 25px;
+    bottom: 120px;
+    width: 370px;
+    max-width: 90vw;
+    height: 70vh;
+    max-height: 600px;
+    background: var(--background-color);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* -------------------
+   HEADER CỦA CHATBOT
+--------------------*/
+.pop-up-header {
+    background: var(--header-bg);
+    color: var(--text-color-light);
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.pop-up-toggle {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.pop-up-toggle:hover {
+    opacity: 1;
+}
+
+/* -------------------
+   VÙNG HIỂN THỊ TIN NHẮN
+--------------------*/
+#messages {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#messages::before {
+    content: "Chào bạn! Mình là chatbot hỗ trợ tra cứu kiến thức về Điện - Điện tử ô tô. Mình có thể giúp gì cho bạn?";
+    background: #eef7ff;
+    color: #555;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    max-width: 90%;
+    border: 1px solid #d4e9ff;
+}
+
+#messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+#messages::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+#messages::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+#messages::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+}
+
+/* -------------------
+   ĐỊNH DẠNG TIN NHẮN
+--------------------*/
+.response {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    justify-content: right;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+#bot {
+    align-self: flex-start;
+    max-width: 95%;
+}
+
+.bot1 {
+    background: var(--bot-message-bg);
+    color: var(--text-color-dark);
+    padding: 12px 16px;
+    border-radius: 20px 20px 20px 5px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+#user {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+    max-width: 95%;
+}
+
+.userText {
+    background: var(--user-message-bg);
+    color: var(--text-color-light);
+    padding: 12px 16px;
+    border-radius: 20px 20px 5px 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    word-wrap: break-word;
+    text-align: right;
+}
+
+.bot1 a {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* -------------------
+   Ô NHẬP LIỆU
+--------------------*/
+.chat-form {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid var(--border-color);
+    background-color: var(--background-color);
+    flex-shrink: 0;
+}
+
+#chat-input {
+    flex-grow: 1;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 10px 18px;
+    font-size: 0.95rem;
+    outline: none;
+    resize: none;
+    transition: border-color 0.2s;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+#chat-input:focus {
+    border-color: var(--primary-color);
+}
+
+#send-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.2s, transform 0.1s;
+    flex-shrink: 0;
+}
+
+#send-btn:hover {
+    background-color: #0056b3;
+}
+
+#send-btn:active {
+    transform: scale(0.9);
+}
+
+#send-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    transform: scale(1);
+}
+
+#send-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+@keyframes phoneRingFixed {
+    0% {
+        transform: rotate(0) skew(1deg) translateY(0)
+    }
+
+    3% {
+        transform: rotate(-25deg) skew(1deg)
+    }
+
+    6% {
+        transform: rotate(25deg) skew(1deg)
+    }
+
+    9% {
+        transform: rotate(-5deg) skew(1deg)
+    }
+
+    10%,100%,20%,30%,40%,50%,60%,70%,80%,90% {
+        transform: rotate(0) skew(1deg)
+    }
+}
+/* Nút tham khảo AI trên Header */
+    #ai-ref-btn { cursor: pointer; opacity: 0.8; transition: opacity 0.2s; }
+    #ai-ref-btn:hover { opacity: 1; }
+    #ai-ref-btn svg { width: 24px; height: 24px; fill: currentColor; 
+        animation: phoneRingFixed 5s ease-in-out infinite;}
+    
+
+    /* Cập nhật header để sử dụng Flexbox */
+    .pop-up-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* Các thuộc tính cũ như background, color, padding vẫn được giữ từ file css chính */
+    }
+    
+    .header-title {
+        font-weight: bold;
+        font-size: 1.1rem; /* Đảm bảo kích thước nhất quán */
+    }
+
+    /* Cửa sổ Modal cho QR Code */
+    .modal-overlay { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.6); justify-content: center; align-items: center; animation: fadeIn 0.3s; }
+    .modal-content { background-color: #fff; color: #333; margin: auto; padding: 20px 30px; border-radius: 10px; width: 90%; max-width: 350px; text-align: center; position: relative; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+    .close-modal { position: absolute; top: 10px; right: 15px; color: #aaa; font-size: 28px; font-weight: bold; cursor: pointer; }
+    .close-modal:hover { color: #000; }
+    .qr-code-img {width: 100%;max-width: 300px;margin: 15px 0;border: 1px solid #eee;display: inline;}
+    .modal-link { display: inline-block; padding: 10px 20px; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 5px; margin-top: 10px; transition: background-color 0.2s; }
+    .modal-link:hover { background-color: #0056b3; }
+    
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
