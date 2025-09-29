@@ -1,7 +1,7 @@
 html,body{min-height:100%}
 html{background:#FFF url(_intef_bg.png) repeat 0 -2px}
 body{padding:0;
-	text-align:center;
+	text-align: justify;
 	background:url(_intef_header.png) no-repeat 50% 0
 }
 @media all and (min-width:1px) {
@@ -10,8 +10,8 @@ body{padding:0;
 	}
 }
 #lbOverlay{background:#f3f3f3}
-#content{width:100%;max-width:1280px;min-width:300px;margin:0 auto;text-align:left;position:relative;padding-bottom:21px}
-#main-wrapper{padding:0 25px 1px 305px;background:#fff url(_intef_left_column.gif) repeat-y 0 0;box-shadow:rgba(0, 0, 0, 0.4) 3px 3px 8px}
+#content{width:100%;max-width:1280px;min-width:300px;margin:0 auto;text-align:justify;position:relative;padding-bottom:21px}
+#main-wrapper{padding:0 35px 1px 325px;background:#fff url(_intef_left_column.gif) repeat-y 0 0;box-shadow:rgba(0, 0, 0, 0.4) 3px 3px 8px}
 .no-nav #main-wrapper{padding-left:25px;background:#fff}
 #main{width:100%}
 #header,#emptyHeader{border:none;padding:40px 210px 20px 20px;background:none;font-size:1.55em; text-align: center;}
@@ -45,7 +45,7 @@ body{padding:0;
 #siteNav {
     width: 279px;
     float: left;
-    padding-right: 20px;
+    /* padding-right: 20px; */
     margin: 15px 0 70px 0;
 }
 
@@ -139,7 +139,7 @@ box-shadow:rgba(0, 0, 0, 0.25) 3px 3px 4px}
 
 /* Autoclear */
 #content:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0} 
-#content{display:inline-block}
+#content{/* display:inline-block; */}
 html[xmlns] #content{display:block}
 * html #content{height: 1%;overflow:visible}
 
@@ -232,7 +232,7 @@ a .exe-client-search-result{color:#00566a}
 /* --- Áp dụng animation vào icon chatbot --- */
 #keychat {
     position: fixed;
-    bottom: 45px;
+    bottom: 65px;
     right: 15px;
     width: 60px;
     height: 60px;
@@ -266,7 +266,7 @@ a .exe-client-search-result{color:#00566a}
     display: none;
     position: fixed;
     right: 25px;
-    bottom: 100px;
+    bottom: 120px;
     width: 370px;
     max-width: 90vw;
     height: 70vh;
@@ -526,7 +526,7 @@ a .exe-client-search-result{color:#00566a}
     .modal-content { background-color: #fff; color: #333; margin: auto; padding: 20px 30px; border-radius: 10px; width: 90%; max-width: 350px; text-align: center; position: relative; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
     .close-modal { position: absolute; top: 10px; right: 15px; color: #aaa; font-size: 28px; font-weight: bold; cursor: pointer; }
     .close-modal:hover { color: #000; }
-    .qr-code-img { width: 100%; max-width: 300px; margin: 15px 0; border: 1px solid #eee; }
+    .qr-code-img {width: 100%;max-width: 300px;margin: 15px 0;border: 1px solid #eee;display: inline;}
     .modal-link { display: inline-block; padding: 10px 20px; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 5px; margin-top: 10px; transition: background-color 0.2s; }
     .modal-link:hover { background-color: #0056b3; }
     

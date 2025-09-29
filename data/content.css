@@ -18,25 +18,6 @@
   src: url('fonts/lora-v37-latin_vietnamese-700.woff2') format('woff2');
 }
 
-/* Roboto */
-/* roboto-regular - vietnamese */
-@font-face {
-  font-display: swap;
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: url('fonts/roboto-v30-vietnamese-regular.woff2') format('woff2');
-}
-/* roboto-700 - vietnamese */
-@font-face {
-  font-display: swap;
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
-  src: url('fonts/roboto-v30-vietnamese-700.woff2') format('woff2');
-}
-
-
 /* --- Cài đặt chung (không đổi) --- */
 html, body {
     min-height: 100%;
@@ -210,6 +191,10 @@ img {
   margin-left: auto;
   margin-right: auto;
     }
+img.avatar {
+  display: inline-block;   /* trở về mặc định */
+  margin: 0;               /* bỏ căn giữa */
+}
 /* --- MỚI: CSS ĐỂ CĂN GIỮA TẤT CẢ BẢNG --- */
 table {
   margin-left: auto;
