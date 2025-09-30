@@ -209,32 +209,28 @@
 <script src="js/tailwind.js"></script>
 </p>
 <style>
-
-        #quiz-container {
-
-            transition: opacity 0.3s ease-in-out;
-
-        }
-
-        .answer-btn.correct {
-
-            background-color: #22c55e !important; color: white !important; border-color: #16a34a !important; transform: scale(1.02);
-
-        }
-
-        .answer-btn.incorrect {
-
-            background-color: #ef4444 !important; color: white !important; border-color: #dc2626 !important;
-
-        }
-
-        .answer-btn:disabled {
-
-            opacity: 0.7; cursor: not-allowed;
-
-        }
-
-    </style>
+        #quiz-container {
+            transition: opacity 0.3s ease-in-out;
+        }
+        /* Lớp CSS cho câu trả lời đúng */
+        .answer-btn.correct {
+            background-color: #22c55e !important; /* Tailwind green-500 */
+            color: white !important;
+            border-color: #16a34a !important; /* Tailwind green-600 */
+            transform: scale(1.02);
+        }
+        /* Lớp CSS cho câu trả lời sai mà người dùng đã chọn */
+        .answer-btn.incorrect {
+            background-color: #ef4444 !important; /* Tailwind red-500 */
+            color: white !important;
+            border-color: #dc2626 !important; /* Tailwind red-600 */
+        }
+        /* Lớp CSS cho các nút bị vô hiệu hóa */
+        .answer-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+    </style>
 <div id="quiz-container" class="bg-white w-full p-6 md:p-8"><!-- Màn hình bắt đầu game -->
 <div id="start-screen">
 <h1 class="text-xl md:text-2xl font-bold text-gray-900 text-center">Trắc Nghiệm Mạch Điện Ô Tô</h1>
@@ -289,201 +285,131 @@
         ];
 
 
-
-        const quizContainer = document.getElementById('quiz-container');
-
-        const startScreen = document.getElementById('start-screen');
-
-        const questionScreen = document.getElementById('question-screen');
-
-        const resultScreen = document.getElementById('result-screen');
-
-        const startBtn = document.getElementById('start-btn');
-
-        const nextBtn = document.getElementById('next-btn');
-
-        const restartBtn = document.getElementById('restart-btn');
-
-        const questionText = document.getElementById('question-text');
-
-        const answerButtons = document.getElementById('answer-buttons');
-
-        const currentQuestionEl = document.getElementById('current-question');
-
-        const scoreEl = document.getElementById('score');
-
-        const finalScoreEl = document.getElementById('final-score');
-
-        const resultMessageEl = document.getElementById('result-message');
-
-        let shuffledQuestions, currentQuestionIndex, score = 0;
-
-
-
-        function startGame() {
-
-            startScreen.classList.add('hidden');
-
-            resultScreen.classList.add('hidden');
-
-            questionScreen.classList.remove('hidden');
-
-            shuffledQuestions = [...questions].sort(() => Math.random() - 0.5);
-
-            currentQuestionIndex = 0;
-
-            score = 0;
-
-            scoreEl.innerText = score;
-
-            setNextQuestion();
-
-        }
-
-        
-
-        function setNextQuestion() {
-
-            resetState();
-
-            showQuestion(shuffledQuestions[currentQuestionIndex]);
-
-        }
-
-        
-
-        function resetState() {
-
-            nextBtn.classList.add('hidden');
-
-            while (answerButtons.firstChild) {
-
-                answerButtons.removeChild(answerButtons.firstChild);
-
-            }
-
-        }
-
-
-
-        function showQuestion(questionData) {
-
-            currentQuestionEl.innerText = currentQuestionIndex + 1;
-
-            questionText.innerText = questionData.question;
-
-            questionData.answers.forEach(answer => {
-
-                const button = document.createElement('button');
-
-                button.innerHTML = answer.text;
-
-                button.classList.add('answer-btn', 'w-full', 'text-left', 'p-4', 'rounded-lg', 'border-2', 'border-gray-300', 'bg-white', 'text-gray-800', 'hover:bg-gray-50', 'hover:border-blue-500', 'transition-all', 'duration-200');
-
-                if (answer.correct) button.dataset.correct = "true";
-
-                button.addEventListener('click', selectAnswer);
-
-                answerButtons.appendChild(button);
-
-            });
-
-            if (typeof MathJax !== 'undefined') MathJax.typesetPromise();
-
-        }
-
-        
-
-        function selectAnswer(e) {
-
-            const selectedBtn = e.currentTarget;
-
-            const isCorrect = selectedBtn.dataset.correct === "true";
-
-            Array.from(answerButtons.children).forEach(button => {
-
-                button.disabled = true;
-
-                if (button.dataset.correct === "true") button.classList.add('correct');
-
-            });
-
-            if (isCorrect) {
-
-                score++;
-
-                scoreEl.innerText = score;
-
-            } else {
-
-                selectedBtn.classList.add('incorrect');
-
-            }
-
-            if (shuffledQuestions.length > currentQuestionIndex + 1) {
-
-                nextBtn.classList.remove('hidden');
-
-            } else {
-
-                setTimeout(showResult, 1500);
-
-            }
-
-        }
-
-
-
-        function showNextQuestion() {
-
-            currentQuestionIndex++;
-
-            quizContainer.style.opacity = 0;
-
-            setTimeout(() => {
-
-                setNextQuestion();
-
-                quizContainer.style.opacity = 1;
-
-            }, 300);
-
-        }
-
-
-
-        function showResult() {
-
-            questionScreen.classList.add('hidden');
-
-            resultScreen.classList.remove('hidden');
-
-            finalScoreEl.innerText = score;
-
-            let message = "";
-
-            if (score >= 9) message = "Xuất sắc! Bạn có một nền tảng rất vững chắc. Sẵn sàng cho môn thực hành rồi!";
-
-            else if (score >= 7) message = "Rất tốt! Bạn đã nắm được hầu hết các kiến thức quan trọng.";
-
-            else if (score >= 5) message = "Khá lắm! Hãy ôn lại một vài điểm nhỏ nữa để tự tin hơn nhé.";
-
-            else message = "Đừng lo lắng! Đây là bước khởi đầu. Chơi lại để củng cố kiến thức nào!";
-
-            resultMessageEl.innerText = message;
-
-        }
-
-
-
-        startBtn.addEventListener('click', startGame);
-
-        nextBtn.addEventListener('click', showNextQuestion);
-
-        restartBtn.addEventListener('click', startGame);
-
-    </script>
-</p></div>
+       // --- Các biến và DOM elements ---
+        const quizContainer = document.getElementById('quiz-container');
+        const startScreen = document.getElementById('start-screen');
+        const questionScreen = document.getElementById('question-screen');
+        const resultScreen = document.getElementById('result-screen');
+        const startBtn = document.getElementById('start-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const restartBtn = document.getElementById('restart-btn');
+        const questionText = document.getElementById('question-text');
+        const answerButtons = document.getElementById('answer-buttons');
+        const currentQuestionEl = document.getElementById('current-question');
+        const scoreEl = document.getElementById('score');
+        const finalScoreEl = document.getElementById('final-score');
+        const resultMessageEl = document.getElementById('result-message');
+
+        let shuffledQuestions, currentQuestionIndex;
+        let score = 0;
+
+        // Bắt đầu hoặc khởi động lại game
+        function startGame() {
+            startScreen.classList.add('hidden');
+            resultScreen.classList.add('hidden');
+            questionScreen.classList.remove('hidden');
+            shuffledQuestions = [...questions].sort(() => Math.random() - 0.5);
+            currentQuestionIndex = 0;
+            score = 0;
+            scoreEl.innerText = score;
+            setNextQuestion();
+        }
+        
+        // Hiển thị câu hỏi tiếp theo
+        function setNextQuestion() {
+            resetState();
+            showQuestion(shuffledQuestions[currentQuestionIndex]);
+        }
+        
+        // Reset lại trạng thái của các nút
+        function resetState() {
+            nextBtn.classList.add('hidden');
+            while (answerButtons.firstChild) {
+                answerButtons.removeChild(answerButtons.firstChild);
+            }
+        }
+
+        // Hiển thị câu hỏi và các lựa chọn trả lời
+        function showQuestion(questionData) {
+            currentQuestionEl.innerText = currentQuestionIndex + 1;
+            questionText.innerText = questionData.question;
+            questionData.answers.forEach(answer => {
+                const button = document.createElement('button');
+                button.innerText = answer.text;
+                button.classList.add('answer-btn', 'w-full', 'text-left', 'p-4', 'rounded-lg', 'border-2', 'border-gray-300', 'bg-white', 'text-gray-800', 'hover:bg-gray-50', 'hover:border-blue-500', 'transition-all', 'duration-200');
+                if (answer.correct) {
+                    button.dataset.correct = "true";
+                }
+                button.addEventListener('click', selectAnswer);
+                answerButtons.appendChild(button);
+            });
+        }
+        
+        // Xử lý khi người dùng chọn một câu trả lời
+        function selectAnswer(e) {
+            const selectedBtn = e.target;
+            const isCorrect = selectedBtn.dataset.correct === "true";
+
+            // Vô hiệu hóa tất cả các nút và hiển thị đáp án đúng
+            Array.from(answerButtons.children).forEach(button => {
+                button.disabled = true;
+                if (button.dataset.correct === "true") {
+                    button.classList.add('correct');
+                }
+            });
+
+            if (isCorrect) {
+                score++;
+                scoreEl.innerText = score;
+            } else {
+                // Nếu chọn sai, tô đỏ câu trả lời đã chọn
+                selectedBtn.classList.add('incorrect');
+            }
+            
+            // Kiểm tra xem đã hết câu hỏi chưa
+            if (shuffledQuestions.length > currentQuestionIndex + 1) {
+                nextBtn.classList.remove('hidden');
+            } else {
+                // Nếu hết câu hỏi, hiển thị kết quả sau 1.5 giây
+                setTimeout(showResult, 1500);
+            }
+        }
+
+        // Chuyển sang câu hỏi tiếp theo
+        function showNextQuestion() {
+            currentQuestionIndex++;
+            // Hiệu ứng chuyển cảnh
+            quizContainer.style.opacity = 0;
+            setTimeout(() => {
+                setNextQuestion();
+                quizContainer.style.opacity = 1;
+            }, 300);
+        }
+
+        // Hiển thị màn hình kết quả cuối cùng
+        function showResult() {
+            questionScreen.classList.add('hidden');
+            resultScreen.classList.remove('hidden');
+            finalScoreEl.innerText = score;
+            
+            let message = "";
+            if (score >= 9) {
+                message = "Xuất sắc! Bạn có một nền tảng rất vững chắc. Sẵn sàng cho môn thực hành rồi!";
+            } else if (score >= 7) {
+                message = "Rất tốt! Bạn đã nắm được hầu hết các kiến thức quan trọng.";
+            } else if (score >= 5) {
+                message = "Khá lắm! Hãy ôn lại một vài điểm nhỏ nữa để tự tin hơn nhé.";
+            } else {
+                message = "Đừng lo lắng! Đây là bước khởi đầu. Chơi lại để củng cố kiến thức nào!";
+            }
+            resultMessageEl.innerText = message;
+        }
+
+        // Gắn sự kiện cho các nút
+        startBtn.addEventListener('click', startGame);
+        nextBtn.addEventListener('click', showNextQuestion);
+        restartBtn.addEventListener('click', startGame);
+    </script></div>
 </div>
 </div>
 </article>
