@@ -671,7 +671,7 @@ text through the text editing buttons associated with the field."></unicode>
             if (score &gt;= 9) message = &quot;Xuất sắc! Bạn có một nền tảng rất vững chắc. Sẵn sàng cho môn thực hành rồi!&quot;;
             else if (score &gt;= 7) message = &quot;Rất tốt! Bạn đã nắm được hầu hết các kiến thức quan trọng.&quot;;
             else if (score &gt;= 5) message = &quot;Khá lắm! Hãy ôn lại một vài điểm nhỏ nữa để tự tin hơn nhé.&quot;;
-            else message = &quot;Đừng lo lắng! Đây là bước khởi đầu. Chơi lại để củng cố kiến thức nào!&quot;;
+            else message = &quot;Đừng lo lắng! Đây là bước khởi đầu. Thử lại để củng cố kiến thức nào!&quot;;
             resultMessageEl.innerText = message;
         }
 
@@ -2267,7 +2267,7 @@ text through the text editing buttons associated with the field."></unicode>
 
             else if (score &gt;= 5) message = &quot;Khá lắm! Hãy ôn lại một vài điểm nhỏ nữa để tự tin hơn nhé.&quot;;
 
-            else message = &quot;Đừng lo lắng! Đây là bước khởi đầu. Chơi lại để củng cố kiến thức nào!&quot;;
+            else message = &quot;Đừng lo lắng! Đây là bước khởi đầu. Thử lại để củng cố kiến thức nào!&quot;;
 
             resultMessageEl.innerText = message;
 
@@ -3621,7 +3621,7 @@ text through the text editing buttons associated with the field."></unicode>
             } else if (score &gt;= 5) {
                 message = &quot;Khá lắm! Hãy ôn lại một vài điểm nhỏ nữa để tự tin hơn nhé.&quot;;
             } else {
-                message = &quot;Đừng lo lắng! Đây là bước khởi đầu. Chơi lại để củng cố kiến thức nào!&quot;;
+                message = &quot;Đừng lo lắng! Đây là bước khởi đầu. Thử lại để củng cố kiến thức nào!&quot;;
             }
             resultMessageEl.innerText = message;
         }
@@ -4949,7 +4949,7 @@ text through the text editing buttons associated with the field."></unicode>
             } else if (score &gt;= 5) {
                 message = &quot;Khá lắm! Hãy ôn lại một vài điểm nhỏ nữa để tự tin hơn nhé.&quot;;
             } else {
-                message = &quot;Đừng lo lắng! Đây là bước khởi đầu. Chơi lại để củng cố kiến thức nào!&quot;;
+                message = &quot;Đừng lo lắng! Đây là bước khởi đầu. Thử lại để củng cố kiến thức nào!&quot;;
             }
             resultMessageEl.innerText = message;
         }
@@ -7365,7 +7365,7 @@ text through the text editing buttons associated with the field."></unicode>
             } else if (score &gt;= 5) {
                 message = &quot;Khá lắm! Hãy ôn lại một vài điểm nhỏ nữa để tự tin hơn nhé.&quot;;
             } else {
-                message = &quot;Đừng lo lắng! Đây là bước khởi đầu. Chơi lại để củng cố kiến thức nào!&quot;;
+                message = &quot;Đừng lo lắng! Đây là bước khởi đầu. Thử lại để củng cố kiến thức nào!&quot;;
             }
             resultMessageEl.innerText = message;
         }
@@ -9887,7 +9887,7 @@ text through the text editing buttons associated with the field."></unicode>
             } else if (score &gt;= 5) {
                 message = &quot;Khá lắm! Hãy ôn lại một vài điểm nhỏ nữa để tự tin hơn nhé.&quot;;
             } else {
-                message = &quot;Đừng lo lắng! Đây là bước khởi đầu. Chơi lại để củng cố kiến thức nào!&quot;;
+                message = &quot;Đừng lo lắng! Đây là bước khởi đầu. Thử lại để củng cố kiến thức nào!&quot;;
             }
             resultMessageEl.innerText = message;
         }
@@ -11794,7 +11794,7 @@ text through the text editing buttons associated with the field."></unicode>
             } else if (score &gt;= 5) {
                 message = &quot;Khá lắm! Hãy ôn lại một vài điểm nhỏ nữa để tự tin hơn nhé.&quot;;
             } else {
-                message = &quot;Đừng lo lắng! Đây là bước khởi đầu. Chơi lại để củng cố kiến thức nào!&quot;;
+                message = &quot;Đừng lo lắng! Đây là bước khởi đầu. Thử lại để củng cố kiến thức nào!&quot;;
             }
             resultMessageEl.innerText = message;
         }
@@ -14440,7 +14440,7 @@ text through the text editing buttons associated with the field."></unicode>
             } else if (score &gt;= 5) {
                 message = &quot;Khá lắm! Hãy ôn lại một vài điểm nhỏ nữa để tự tin hơn nhé.&quot;;
             } else {
-                message = &quot;Đừng lo lắng! Đây là bước khởi đầu. Chơi lại để củng cố kiến thức nào!&quot;;
+                message = &quot;Đừng lo lắng! Đây là bước khởi đầu. Thử lại để củng cố kiến thức nào!&quot;;
             }
             resultMessageEl.innerText = message;
         }
@@ -17061,7 +17061,7 @@ text through the text editing buttons associated with the field."></unicode>
             } else if (score &gt;= 5) {
                 message = &quot;Khá lắm! Hãy ôn lại một vài điểm nhỏ nữa để tự tin hơn nhé.&quot;;
             } else {
-                message = &quot;Đừng lo lắng! Đây là bước khởi đầu. Chơi lại để củng cố kiến thức nào!&quot;;
+                message = &quot;Đừng lo lắng! Đây là bước khởi đầu. Thử lại để củng cố kiến thức nào!&quot;;
             }
             resultMessageEl.innerText = message;
         }
@@ -19006,7 +19006,7 @@ text through the text editing buttons associated with the field."></unicode>
             } else if (score &gt;= 5) {
                 message = &quot;Khá lắm! Hãy ôn lại một vài điểm nhỏ nữa để tự tin hơn nhé.&quot;;
             } else {
-                message = &quot;Đừng lo lắng! Đây là bước khởi đầu. Chơi lại để củng cố kiến thức nào!&quot;;
+                message = &quot;Đừng lo lắng! Đây là bước khởi đầu. Thử lại để củng cố kiến thức nào!&quot;;
             }
             resultMessageEl.innerText = message;
         }
@@ -20885,7 +20885,7 @@ text through the text editing buttons associated with the field."></unicode>
             if (score &gt;= 9) message = &quot;Xuất sắc! Bạn có một nền tảng rất vững chắc. Sẵn sàng cho môn thực hành rồi!&quot;;
             else if (score &gt;= 7) message = &quot;Rất tốt! Bạn đã nắm được hầu hết các kiến thức quan trọng.&quot;;
             else if (score &gt;= 5) message = &quot;Khá lắm! Hãy ôn lại một vài điểm nhỏ nữa để tự tin hơn nhé.&quot;;
-            else message = &quot;Đừng lo lắng! Đây là bước khởi đầu. Chơi lại để củng cố kiến thức nào!&quot;;
+            else message = &quot;Đừng lo lắng! Đây là bước khởi đầu. Thử lại để củng cố kiến thức nào!&quot;;
             resultMessageEl.innerText = message;
         }
 
@@ -23433,7 +23433,7 @@ text through the text editing buttons associated with the field."></unicode>
             if (score &gt;= 9) message = &quot;Xuất sắc! Bạn có một nền tảng rất vững chắc. Sẵn sàng cho môn thực hành rồi!&quot;;
             else if (score &gt;= 7) message = &quot;Rất tốt! Bạn đã nắm được hầu hết các kiến thức quan trọng.&quot;;
             else if (score &gt;= 5) message = &quot;Khá lắm! Hãy ôn lại một vài điểm nhỏ nữa để tự tin hơn nhé.&quot;;
-            else message = &quot;Đừng lo lắng! Đây là bước khởi đầu. Chơi lại để củng cố kiến thức nào!&quot;;
+            else message = &quot;Đừng lo lắng! Đây là bước khởi đầu. Thử lại để củng cố kiến thức nào!&quot;;
             resultMessageEl.innerText = message;
         }
 
@@ -25592,7 +25592,7 @@ text through the text editing buttons associated with the field."></unicode>
             if (score &gt;= 9) message = &quot;Xuất sắc! Bạn có một nền tảng rất vững chắc. Sẵn sàng cho môn thực hành rồi!&quot;;
             else if (score &gt;= 7) message = &quot;Rất tốt! Bạn đã nắm được hầu hết các kiến thức quan trọng.&quot;;
             else if (score &gt;= 5) message = &quot;Khá lắm! Hãy ôn lại một vài điểm nhỏ nữa để tự tin hơn nhé.&quot;;
-            else message = &quot;Đừng lo lắng! Đây là bước khởi đầu. Chơi lại để củng cố kiến thức nào!&quot;;
+            else message = &quot;Đừng lo lắng! Đây là bước khởi đầu. Thử lại để củng cố kiến thức nào!&quot;;
             resultMessageEl.innerText = message;
         }
 
@@ -27419,7 +27419,7 @@ text through the text editing buttons associated with the field."></unicode>
             if (score &gt;= 9) message = &quot;Xuất sắc! Bạn có một nền tảng rất vững chắc. Sẵn sàng cho môn thực hành rồi!&quot;;
             else if (score &gt;= 7) message = &quot;Rất tốt! Bạn đã nắm được hầu hết các kiến thức quan trọng.&quot;;
             else if (score &gt;= 5) message = &quot;Khá lắm! Hãy ôn lại một vài điểm nhỏ nữa để tự tin hơn nhé.&quot;;
-            else message = &quot;Đừng lo lắng! Đây là bước khởi đầu. Chơi lại để củng cố kiến thức nào!&quot;;
+            else message = &quot;Đừng lo lắng! Đây là bước khởi đầu. Thử lại để củng cố kiến thức nào!&quot;;
             resultMessageEl.innerText = message;
         }
 
